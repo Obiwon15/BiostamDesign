@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA654670-A386-42BD-BA20-ADAC607F6227}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BiostamDesign</RootNamespace>
+    <AssemblyName>BiostamDesign</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>BiostamDesign.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DPFPDevNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=696774c42ee28c57, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\DigitalPersona\One Touch SDK\.NET\Bin\DPFPDevNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPEngNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=7fe76e7adf19964b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\DigitalPersona\One Touch SDK\.NET\Bin\DPFPEngNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPGuiNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=d4f4a0bd9c559145, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\DigitalPersona\One Touch SDK\.NET\Bin\DPFPGuiNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPShrNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=d902fe275a8d6cf2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\DigitalPersona\One Touch SDK\.NET\Bin\DPFPShrNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPShrXTypeLibNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=c0c98f712d5392a7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\Program Files\DigitalPersona\One Touch SDK\.NET\Bin\DPFPShrXTypeLibNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPVerNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=4de0a9c4dcc83984, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\DigitalPersona\One Touch SDK\.NET\Bin\DPFPVerNET.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ADashboard.Designer.cs">
+      <DependentUpon>ADashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminRegister.Designer.cs">
+      <DependentUpon>adminRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendance.Designer.cs">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttendanceTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceTable.Designer.cs">
+      <DependentUpon>AttendanceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ATTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ATTP.Designer.cs">
+      <DependentUpon>ATTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="calattend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="calattend.Designer.cs">
+      <DependentUpon>calattend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events.cs" />
+    <Compile Include="Examination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examination.Designer.cs">
+      <DependentUpon>Examination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminationPortal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExaminationPortal.Designer.cs">
+      <DependentUpon>ExaminationPortal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExamLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExamLogin.Designer.cs">
+      <DependentUpon>ExamLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExamManualEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamManualEntry.Designer.cs">
+      <DependentUpon>ExamManualEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExamManualReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamManualReg.Designer.cs">
+      <DependentUpon>ExamManualReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExamTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamTable.Designer.cs">
+      <DependentUpon>ExamTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Feedback.Designer.cs">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FINGERPRINTdbDataSet.cs">
+      <DependentUpon>FINGERPRINTdbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FINGERPRINTdbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINGERPRINTdbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FINGERPRINTdbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINGERPRINTdbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FINGERPRINTdbDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINGERPRINTdbDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FINGERPRINTdbDataSet3.cs">
+      <DependentUpon>FINGERPRINTdbDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FINGERPRINTdbDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINGERPRINTdbDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FINGERPRINTdbDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINGERPRINTdbDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FINGERPRINTdbDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINGERPRINTdbDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FINGERPRINTdbDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINGERPRINTdbDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FingerPrintUtility.cs" />
+    <Compile Include="FirstControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FirstControl.Designer.cs">
+      <DependentUpon>FirstControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgetPass.Designer.cs">
+      <DependentUpon>ForgetPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomeControl.Designer.cs">
+      <DependentUpon>HomeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LecturerDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LecturerDetails.Designer.cs">
+      <DependentUpon>LecturerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManualEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManualEntry.Designer.cs">
+      <DependentUpon>ManualEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManualReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManualReg.Designer.cs">
+      <DependentUpon>ManualReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PassVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PassVer.Designer.cs">
+      <DependentUpon>PassVer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordChange.Designer.cs">
+      <DependentUpon>PasswordChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionPortal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SessionPortal.Designer.cs">
+      <DependentUpon>SessionPortal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash1.Designer.cs">
+      <DependentUpon>Splash1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="spmessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="spmessage.Designer.cs">
+      <DependentUpon>spmessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffDashboard.Designer.cs">
+      <DependentUpon>StaffDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stmessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stmessage.Designer.cs">
+      <DependentUpon>stmessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentPopup.Designer.cs">
+      <DependentUpon>StudentPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentRecord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentRecord.Designer.cs">
+      <DependentUpon>StudentRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lecturerRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lecturerRegister.Designer.cs">
+      <DependentUpon>lecturerRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentRegister.Designer.cs">
+      <DependentUpon>studentRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentsDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentsDetails.Designer.cs">
+      <DependentUpon>studentsDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAtt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewAtt.Designer.cs">
+      <DependentUpon>ViewAtt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewDetails.Designer.cs">
+      <DependentUpon>ViewDetails.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ADashboard.resx">
+      <DependentUpon>ADashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminRegister.resx">
+      <DependentUpon>adminRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance.resx">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceTable.resx">
+      <DependentUpon>AttendanceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ATTP.resx">
+      <DependentUpon>ATTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="calattend.resx">
+      <DependentUpon>calattend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examination.resx">
+      <DependentUpon>Examination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExaminationPortal.resx">
+      <DependentUpon>ExaminationPortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamLogin.resx">
+      <DependentUpon>ExamLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamManualEntry.resx">
+      <DependentUpon>ExamManualEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamManualReg.resx">
+      <DependentUpon>ExamManualReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamTable.resx">
+      <DependentUpon>ExamTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feedback.resx">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstControl.resx">
+      <DependentUpon>FirstControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgetPass.resx">
+      <DependentUpon>ForgetPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeControl.resx">
+      <DependentUpon>HomeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecturerDetails.resx">
+      <DependentUpon>LecturerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManualEntry.resx">
+      <DependentUpon>ManualEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManualReg.resx">
+      <DependentUpon>ManualReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassVer.resx">
+      <DependentUpon>PassVer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordChange.resx">
+      <DependentUpon>PasswordChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SessionPortal.resx">
+      <DependentUpon>SessionPortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash1.resx">
+      <DependentUpon>Splash1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="spmessage.resx">
+      <DependentUpon>spmessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffDashboard.resx">
+      <DependentUpon>StaffDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stmessage.resx">
+      <DependentUpon>stmessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentPopup.resx">
+      <DependentUpon>StudentPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentRecord.resx">
+      <DependentUpon>StudentRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lecturerRegister.resx">
+      <DependentUpon>lecturerRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentRegister.resx">
+      <DependentUpon>studentRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentsDetails.resx">
+      <DependentUpon>studentsDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAtt.resx">
+      <DependentUpon>ViewAtt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewDetails.resx">
+      <DependentUpon>ViewDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="FINGERPRINTdbDataSet.xsc">
+      <DependentUpon>FINGERPRINTdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FINGERPRINTdbDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FINGERPRINTdbDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="FINGERPRINTdbDataSet.xss">
+      <DependentUpon>FINGERPRINTdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FINGERPRINTdbDataSet1.xsc">
+      <DependentUpon>FINGERPRINTdbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FINGERPRINTdbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FINGERPRINTdbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FINGERPRINTdbDataSet1.xss">
+      <DependentUpon>FINGERPRINTdbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FINGERPRINTdbDataSet2.xsc">
+      <DependentUpon>FINGERPRINTdbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FINGERPRINTdbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FINGERPRINTdbDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FINGERPRINTdbDataSet2.xss">
+      <DependentUpon>FINGERPRINTdbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FINGERPRINTdbDataSet3.xsc">
+      <DependentUpon>FINGERPRINTdbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="FINGERPRINTdbDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FINGERPRINTdbDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FINGERPRINTdbDataSet3.xss">
+      <DependentUpon>FINGERPRINTdbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="FINGERPRINTdbDataSet4.xsc">
+      <DependentUpon>FINGERPRINTdbDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="FINGERPRINTdbDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FINGERPRINTdbDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FINGERPRINTdbDataSet4.xss">
+      <DependentUpon>FINGERPRINTdbDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="FINGERPRINTdbDataSet5.xsc">
+      <DependentUpon>FINGERPRINTdbDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="FINGERPRINTdbDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FINGERPRINTdbDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FINGERPRINTdbDataSet5.xss">
+      <DependentUpon>FINGERPRINTdbDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="FINGERPRINTdbDataSet6.xsc">
+      <DependentUpon>FINGERPRINTdbDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="FINGERPRINTdbDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FINGERPRINTdbDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FINGERPRINTdbDataSet6.xss">
+      <DependentUpon>FINGERPRINTdbDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Biometric_Time_and_Attendance_Software1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vllkyt3s54hqhqdn81.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cap1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main-large1114819448unn-primary-admission-list-20162017-released-jpg1474623003-247x3001.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finger-2081169_12801.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\digital-fingerprint_23-21475084111.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biometrics1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1 - Copy1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview-13078bQYwsauqc7_00051.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1 - Copy2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\solution-icon11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\matrix-cosec-people-mobility-solution1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\industry1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo-1474635183442-1d29a9be83d3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="classroom_VC3_icon.ico" />
+    <Content Include="Resources\02. Send My Love %28To Your New Lover%29 - %28www.SongsLover.pk%29.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
